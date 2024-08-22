@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "strictPropertyInitialization": false
+    },
+    "exclude": [
+        "node_modules",
+        "public_html",
+        "test",
+        "**/*.spec.ts",
+        "**/*.test.ts",
+    ]
+}
