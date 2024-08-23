@@ -11,126 +11,6 @@
     "https"
   ],
   "paths": {
-    "/api/artists": {
-      "get": {
-        "tags": [
-          "Artists"
-        ],
-        "summary": "Gets all artists",
-        "description": "Gets all artists",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/api/artist/{id}": {
-      "get": {
-        "tags": [
-          "Artists"
-        ],
-        "summary": "Gets artist by id",
-        "description": "Gets an artists with the specified id",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The id to find"
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/api/artist/name/{name}": {
-      "get": {
-        "tags": [
-          "Artists"
-        ],
-        "summary": "Gets artist by name",
-        "description": "Gets an artists with the specified name",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The name to find"
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/api/writers": {
-      "get": {
-        "tags": [
-          "Writers"
-        ],
-        "summary": "Gets all writers",
-        "description": "Gets all writers",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/api/writer/{id}": {
-      "get": {
-        "tags": [
-          "Writers"
-        ],
-        "summary": "Gets writer by id",
-        "description": "Gets an writers with the specified id",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The id to find"
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/api/writer/name/{name}": {
-      "get": {
-        "tags": [
-          "Writers"
-        ],
-        "summary": "Gets writer by name",
-        "description": "Gets an writers with the specified name",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The name to find"
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/api/songs": {
       "get": {
         "tags": [
@@ -290,6 +170,204 @@
             "in": "query",
             "type": "number",
             "description": "Limit the result to # entities"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/albums": {
+      "get": {
+        "tags": [
+          "Albums"
+        ],
+        "summary": "Gets all albums",
+        "description": "Gets all albums",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/albums/popular/{year}": {
+      "get": {
+        "tags": [
+          "Albums"
+        ],
+        "summary": "Most listened albums for a given year",
+        "description": "Gets the specified number of albums ordered by number of times listened to during the specified year, with or without relations",
+        "parameters": [
+          {
+            "name": "year",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "type": "number",
+            "description": "Limit the result to # entities"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/plays": {
+      "get": {
+        "tags": [
+          "Plays"
+        ],
+        "summary": "Gets all plays",
+        "description": "Gets all plays",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/plays/popular/{year}": {
+      "get": {
+        "tags": [
+          "Plays"
+        ],
+        "summary": "Gets most popular songs",
+        "description": "Gets most popular songs for the specified year",
+        "parameters": [
+          {
+            "name": "year",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/artists": {
+      "get": {
+        "tags": [
+          "Artists"
+        ],
+        "summary": "Gets all artists",
+        "description": "Gets all artists",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/artist/{id}": {
+      "get": {
+        "tags": [
+          "Artists"
+        ],
+        "summary": "Gets artist by id",
+        "description": "Gets an artists with the specified id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The id to find"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/artist/name/{name}": {
+      "get": {
+        "tags": [
+          "Artists"
+        ],
+        "summary": "Gets artist by name",
+        "description": "Gets an artists with the specified name",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The name to find"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/writers": {
+      "get": {
+        "tags": [
+          "Writers"
+        ],
+        "summary": "Gets all writers",
+        "description": "Gets all writers",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/writer/{id}": {
+      "get": {
+        "tags": [
+          "Writers"
+        ],
+        "summary": "Gets writer by id",
+        "description": "Gets an writers with the specified id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The id to find"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/writer/name/{name}": {
+      "get": {
+        "tags": [
+          "Writers"
+        ],
+        "summary": "Gets writer by name",
+        "description": "Gets an writers with the specified name",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The name to find"
           }
         ],
         "responses": {

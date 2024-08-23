@@ -27,11 +27,11 @@ export class SongEntity extends Song {
     @JoinTable({ 
         name: 'SongWriter',
         joinColumn: {
-            name: 'SongsID',
+            name: 'SongID',
             referencedColumnName: 'ID'
         },
         inverseJoinColumn: {
-            name: 'WritersID',
+            name: 'WriterID',
             referencedColumnName: 'ID'
         }
     })

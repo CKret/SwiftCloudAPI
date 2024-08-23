@@ -18,11 +18,11 @@ export class AlbumEntity extends Album {
     @JoinTable({ 
         name: 'AlbumSong',
         joinColumn: {
-            name: 'AlbumsID',
+            name: 'AlbumID',
             referencedColumnName: 'ID'
         },
         inverseJoinColumn: {
-            name: 'SongsID',
+            name: 'SongID',
             referencedColumnName: 'ID'
         }
     })

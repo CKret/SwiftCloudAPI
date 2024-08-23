@@ -16,11 +16,11 @@ export class ArtistEntity extends Artist implements PersonEntity {
     @JoinTable({ 
         name: 'ArtistSong',
         joinColumn: {
-            name: 'ArtistsID',
+            name: 'ArtistID',
             referencedColumnName: 'ID'
         },
         inverseJoinColumn: {
-            name: 'SongsID',
+            name: 'SongID',
             referencedColumnName: 'ID'
         }
     })

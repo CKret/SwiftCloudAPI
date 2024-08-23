@@ -4,9 +4,6 @@ import { ArtistEntity } from "../src/models/ArtistEntity";
 import { WriterEntity } from "../src/models/WriterEntity";
 import { SongEntity } from "../src/models/SongEntity";
 import { AlbumEntity } from "../src/models/AlbumEntity";
-import { AlbumSongEntity } from "../src/models/AlbumSongEntity";
-import { ArtistSongEntity } from "../src/models/ArtistSongEntity";
-import { SongWriterEntity } from "../src/models/SongWriterEntity";
 import { PlaysEntity } from "../src/models/PlaysEntity";
 
 dotevnv.config();
@@ -20,7 +17,7 @@ export const SwiftCloudDataSource = new DataSource({
     database: process.env.DBNAME,
     schema: 'dbo',
     entities: [
-        ArtistEntity, WriterEntity, SongEntity, AlbumEntity, AlbumSongEntity, ArtistSongEntity, SongWriterEntity, PlaysEntity
+        ArtistEntity, WriterEntity, SongEntity, AlbumEntity, PlaysEntity
     ],
     synchronize: true,
     options: {
