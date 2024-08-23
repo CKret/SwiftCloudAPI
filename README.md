@@ -16,7 +16,7 @@ If you feel the urge to run your own **SwiftCloud API** then these are the neces
 ### Instructions for running SwiftCloud API locally
 
  1. Clone the repo from https://github.com/CKret/SwiftCloudAPI.git
- 2. Create a database on MSSQL Server.
+ 2. Create a database on your MSSQL Server instance.
  3. Create a database user who have full access to the database.
  4. Create an **.env** file in the root of the application with the content:
     - PORT=6220
