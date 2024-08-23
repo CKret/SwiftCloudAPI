@@ -34,3 +34,7 @@ If you feel the urge to run your own **SwiftCloud API** then these are the neces
  8. If you want to run this in docker then build an image with the provided **Dockerfile** or use the provided **docker-compose.yml** file.
 
 Access Swagger http://localhost:6220/swagger and play around.
+
+### Tests
+The are some tests in the project which can be run using **jest**. You can run them in Visual Studio Codes using Jest Test Explorer or manually by issuing the command:
+ - npm run test
