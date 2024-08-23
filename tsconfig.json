@@ -1,9 +1,10 @@
 {
     "compilerOptions": {
+        "moduleResolution": "node",
         "esModuleInterop": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "strictPropertyInitialization": false
+        "strictPropertyInitialization": false,
     },
     "exclude": [
         "node_modules",

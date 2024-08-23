@@ -5,9 +5,8 @@ export class QueryHelper {
     static async makeQuery<T>(query: Promise<T>, res: Response) {
         try {
             const result: T = await query
-    
             if (!result) {
-                return res.status(StatusCodes.NOT_FOUND).json({error : 'No songs found!'})
+                return res.status(StatusCodes.NOT_FOUND).json({error : 'Not found!'})
             }
     
             return res.status(StatusCodes.OK).json(result)

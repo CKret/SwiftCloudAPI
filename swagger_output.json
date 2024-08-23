@@ -1,19 +1,23 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "1.0.0",
-    "title": "REST API",
-    "description": ""
+    "version": "0.0.1",
+    "title": "SwiftCloud API",
+    "description": "A fabulous API to settle your cravings for Taylor Swift music statistics!"
   },
-  "host": "localhost:3000",
+  "host": "swiftcloud.ckret.net",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api/artists": {
       "get": {
-        "description": "",
+        "tags": [
+          "Artists"
+        ],
+        "summary": "Gets all artists",
+        "description": "Gets all artists",
         "responses": {
           "default": {
             "description": ""
@@ -23,13 +27,18 @@
     },
     "/api/artist/{id}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Artists"
+        ],
+        "summary": "Gets artist by id",
+        "description": "Gets an artists with the specified id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "The id to find"
           }
         ],
         "responses": {
@@ -41,13 +50,18 @@
     },
     "/api/artist/name/{name}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Artists"
+        ],
+        "summary": "Gets artist by name",
+        "description": "Gets an artists with the specified name",
         "parameters": [
           {
             "name": "name",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "The name to find"
           }
         ],
         "responses": {
@@ -59,7 +73,11 @@
     },
     "/api/writers": {
       "get": {
-        "description": "",
+        "tags": [
+          "Writers"
+        ],
+        "summary": "Gets all writers",
+        "description": "Gets all writers",
         "responses": {
           "default": {
             "description": ""
@@ -69,13 +87,18 @@
     },
     "/api/writer/{id}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Writers"
+        ],
+        "summary": "Gets writer by id",
+        "description": "Gets an writers with the specified id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "The id to find"
           }
         ],
         "responses": {
@@ -87,13 +110,18 @@
     },
     "/api/writer/name/{name}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Writers"
+        ],
+        "summary": "Gets writer by name",
+        "description": "Gets an writers with the specified name",
         "parameters": [
           {
             "name": "name",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "The name to find"
           }
         ],
         "responses": {
@@ -105,7 +133,19 @@
     },
     "/api/songs": {
       "get": {
-        "description": "",
+        "tags": [
+          "Songs"
+        ],
+        "summary": "Gets all songs",
+        "description": "Gets all songs with or without relations",
+        "parameters": [
+          {
+            "name": "rel",
+            "in": "query",
+            "type": "boolean",
+            "description": "Get relational data"
+          }
+        ],
         "responses": {
           "default": {
             "description": ""
@@ -115,13 +155,23 @@
     },
     "/api/song/{id}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Songs"
+        ],
+        "summary": "Gets song by id",
+        "description": "Finds a song with the specified id, with or without relations",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "rel",
+            "in": "query",
+            "type": "boolean",
+            "description": "Get relational data"
           }
         ],
         "responses": {
@@ -133,13 +183,23 @@
     },
     "/api/song/name/{name}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Songs"
+        ],
+        "summary": "Gets song by name",
+        "description": "Finds a song with the specified name, with or without relations",
         "parameters": [
           {
             "name": "name",
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "rel",
+            "in": "query",
+            "type": "boolean",
+            "description": "Get relational data"
           }
         ],
         "responses": {
@@ -151,13 +211,23 @@
     },
     "/api/songs/year/{year}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Songs"
+        ],
+        "summary": "All songs for the specified year",
+        "description": "Gets all songs for the specified year, with or without relations",
         "parameters": [
           {
             "name": "year",
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "rel",
+            "in": "query",
+            "type": "boolean",
+            "description": "Get relational data"
           }
         ],
         "responses": {
@@ -167,15 +237,25 @@
         }
       }
     },
-    "/api/songs/artist/{name}": {
+    "/api/songs/popular/{year}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Songs"
+        ],
+        "summary": "Most listened songs for a given year",
+        "description": "Gets the specified number of songs ordered by number of times listened to during the specified year, with or without relations",
         "parameters": [
           {
-            "name": "name",
+            "name": "year",
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "type": "number",
+            "description": "Limit the result to # entities"
           }
         ],
         "responses": {
@@ -187,31 +267,11 @@
     },
     "/api/songs/popular/{year}/{month}": {
       "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "year",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "month",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
+        "tags": [
+          "Songs"
         ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/api/songs/popular/{year}/{month}/{count}": {
-      "get": {
-        "description": "",
+        "summary": "Most listened songs for a given year and month",
+        "description": "Gets the specified number of songs ordered by number of times listened to during the specified year and month, with or without relations",
         "parameters": [
           {
             "name": "year",
@@ -226,10 +286,10 @@
             "type": "string"
           },
           {
-            "name": "count",
-            "in": "path",
-            "required": true,
-            "type": "string"
+            "name": "limit",
+            "in": "query",
+            "type": "number",
+            "description": "Limit the result to # entities"
           }
         ],
         "responses": {

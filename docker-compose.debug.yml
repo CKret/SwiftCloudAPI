@@ -1,0 +1,12 @@
+services:
+  SwiftCloud:
+    image: swiftcloudapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 6220:6220
+      - 9229:9229
+    command: ["node", "--inspect=0.0.0.0:9229", "/src/app.ts"]

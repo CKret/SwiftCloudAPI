@@ -1,0 +1,10 @@
+services:
+  SwiftCloud:
+    image: swiftcloudapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 6220:6220
