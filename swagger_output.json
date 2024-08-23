@@ -5,10 +5,10 @@
     "title": "SwiftCloud API",
     "description": "A fabulous API to settle your cravings for Taylor Swift music statistics!"
   },
-  "host": "swiftcloud.ckret.net",
+  "host": "localhost:6220",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/api/songs": {
