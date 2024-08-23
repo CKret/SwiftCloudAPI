@@ -25,12 +25,12 @@ If you feel the urge to run your own **SwiftCloud API** then these are the neces
     - DBSERVER=**[YOUR_DB_SERVRE_IP_OR_HOSTNAME]**
     - DBNAME=**[NAME_OF_THE_DATABASE]**
 	- 
-    - **note**: *if you change the **PORT** you need to change the exposed port in **Dockerfile** and host port in **swagger.json** as well.*
+    - **note**: *if you change the **PORT** you need to change the exposed port in **Dockerfile** and host port in **swagger.json** as well. You need to run 'npm run autogen-swagger' after to update the endpoints.*
  5. Install modules:
     - npm install
  6. Run the application (this will create the tables):
     - npm run dev
- 7. Now you need to populate the database with relevant data. I used the provided [Google Sheet](https://docs.google.com/spreadsheets/d/1iNGwJWu4ghwM_jP3U81SRU9oneYqN4DTjW7j9t3lMh8/edit) and wrote an importer but you can manually insert some data so you don't have emtpy tables.
+ 7. Now you need to populate the database with relevant data. I used the provided [Google Sheet](https://docs.google.com/spreadsheets/d/1iNGwJWu4ghwM_jP3U81SRU9oneYqN4DTjW7j9t3lMh8/edit) and wrote an importer but you can manually insert some data so you don't have empty tables.
  8. If you want to run this in docker then build an image with the provided **Dockerfile** or use the provided **docker-compose.yml** file.
 
 Access Swagger http://localhost:6220/swagger and play around.
