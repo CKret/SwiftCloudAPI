@@ -38,3 +38,10 @@ Access Swagger http://localhost:6220/swagger and play around.
 ### Tests
 The are some tests in the project which can be run using **jest**. You can run them in Visual Studio Codes using Jest Test Explorer or manually by issuing the command:
  - npm run test
+
+### Next exciting thing!
+The most important step now is that we create a frontend to showcase the API and what fantastic things it can do.
+
+Now when we have the basics of the API the next thing would be to expand this with even more user data.
+Marketing needs to get the vibe of the community so we know what the users want.
+Then we can create very precise and fun queries.
