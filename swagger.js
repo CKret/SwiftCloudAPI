@@ -6,9 +6,9 @@ const doc = {
         "title": "SwiftCloud API",
         "description": "A fabulous API to settle your cravings for Taylor Swift music statistics!"
     },
-    "host": "localhost:6220",
+    "host": "swiftcloud.ckret.net",
     "schemes": [
-        "http"
+        "https"
       ]
     };
 
