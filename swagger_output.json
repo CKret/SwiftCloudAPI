@@ -5,7 +5,7 @@
     "title": "SwiftCloud API",
     "description": "A fabulous API to settle your cravings for Taylor Swift music statistics!"
   },
-  "host": "localhost:6220",
+  "host": "lolcahost:6220",
   "basePath": "/",
   "schemes": [
     "http"
