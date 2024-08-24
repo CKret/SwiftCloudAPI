@@ -30,7 +30,7 @@ If you feel the urge to run your own **SwiftCloud API** then these are the neces
     - npm install
  6. Run the application (this will create the tables):
     - npm run dev
- 7. Now you need to populate the database with relevant data. I used the provided [Google Sheet](https://docs.google.com/spreadsheets/d/1iNGwJWu4ghwM_jP3U81SRU9oneYqN4DTjW7j9t3lMh8/edit) and wrote an importer but you can manually insert some data so you don't have empty tables.
+ 7. Now you need to populate the database with relevant data. Import the .csv files from **/SwiftCloudAPI-Data.zip** into the database. I used the provided [Google Sheet](https://docs.google.com/spreadsheets/d/1iNGwJWu4ghwM_jP3U81SRU9oneYqN4DTjW7j9t3lMh8/edit) and wrote an importer but you can manually insert the data instead.
  8. If you want to run this in docker then build an image with the provided **Dockerfile** or use the provided **docker-compose.yml** file alternatively pull the image from **DockerHub** with **docker pull ckret/swiftcloudapi**.
 
 Access Swagger http://localhost:6220/swagger and play around.
