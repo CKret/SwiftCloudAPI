@@ -18,7 +18,7 @@ If you feel the urge to run your own **SwiftCloud API** then these are the neces
  1. Clone the repo from https://github.com/CKret/SwiftCloudAPI.git
  2. Create a database on your MSSQL Server instance.
  3. Create a database user who has full access to the database.
- 4. Modify the **/.env** with the correct values:
+ 4. Modify the **/.env** file with the correct values:
     - PORT=6220
     - DBUSER=**[YOUR_DB_USER]**
     - DBPASSWORD=**[YOUR_DB_USER_PASSWORD]**
